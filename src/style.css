@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.todo {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    border: 1px solid red;
+    
+}
+
+header{
+    border: 1px solid;
+    grid-column: 1/-1;
+}
+aside{
+    border: 1px solid;
+}
+main {
+    border:1px solid;
+}
+.maingrid > div {
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    border: 1px solid;;
+}
+dialog {
+    position: absolute;
+    top:20%;
+    left:40%;
+    padding: 20px;
+}
+.projectDia :nth-child(3){
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+dialog button {
+    padding: 10px;
+}
+.projectDia{
+    width: 500px;
+    height: 300px;
+}
+.task{
+    border:1px solid;
+    margin: 10px;
+}
+.taskDiv{
+    
+    border: 3px solid orange;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 1fr 1fr ;
+}
+
+.showDes{
+    display: none;
+    border: 2px solid;
+}
