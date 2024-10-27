@@ -43,6 +43,6 @@ export const projectsMethod = (() => {
     return {
         addTodo,allTodos,addProjects,
         addTodoProject,allProjects,delProject,
-        delTodo,checkTodos,priority,saveLocally,fetchLocallya
+        delTodo,checkTodos,priority,saveLocally
         }
 })()
