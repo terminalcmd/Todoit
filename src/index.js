@@ -50,7 +50,6 @@ const projectDom = (() => {
     })()
 	
 	const appendProject = () => { // displays projects
-		projectsMethod.fetchLocally()
 		secondMainDiv.textContent = ''
 		projectsMethod.allProjects().map((proj,projIndex) => {
 			const projectDiv = document.createElement('div')
