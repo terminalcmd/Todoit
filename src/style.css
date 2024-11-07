@@ -7,7 +7,6 @@
 .todo {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    border: 1px solid red;
     
 }
 
@@ -18,14 +17,36 @@ header{
 aside{
     border: 1px solid;
 }
+nav{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+   
+}
+nav > *{
+    margin-top: 10px;
+}
 main {
     border:1px solid;
+    height: 98vh;
 }
-.maingrid > div {
-    width: 100px;
-    height: 100px;
+.addProjectBtn,.showProjectBtn,.myTaskBtn{
+    font-size: 1.1rem;
+}
+
+.allProjects {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: scroll;
+}
+.allProjects > div {
+    width: 300px;
+    height: 400px;
     margin: 5px;
     border: 1px solid;;
+    border-radius: 10px;
+}
+.allProjects > div > * {
+    margin: 10px;
 }
 dialog {
     position: absolute;
@@ -45,19 +66,66 @@ dialog button {
     width: 500px;
     height: 300px;
 }
+.titleDiv{
+    height: 85%;
+    border: 1px solid;
+}
 .task{
     border:1px solid;
     margin: 10px;
+    
+}
+.allTaskDiv,.projectTodos{
+    height: 93vh;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.firstMainDiv,.projectfirstMainDiv{
+    min-height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.firstMainDiv button,.projectfirstMainDiv button ,.addTask button{
+    font-size: 1.2rem;
+}
+.parentTask{
+    margin: 5px;
+    min-height: 50px;
+    border: 3px solid orange;
+    border-radius: 5px;
+}
+.parentTask > div:nth-child(2){
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    margin-left: 100px;
+    font-size:1.1rem;
+}
+.parentTask > div:last-child{
+    margin-left: 100px;
+    font-size:1.1rem;
 }
 .taskDiv{
-    
-    border: 3px solid orange;
-    margin: 5px;
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr ;
+    grid-template-columns: 100px 7fr 100px 100px 100px;
+    height: 30px; 
+   
 }
-
+.taskDiv > div {
+    font-size: 1.2rem;
+}
 .showDes{
     display: none;
-    border: 2px solid;
+   
+}
+.showTaskDetail{
+    display: none;
+}
+.showTaskDes > *{
+    display:none;
+    
+}
+.delbtn{
+    padding:10px;
 }

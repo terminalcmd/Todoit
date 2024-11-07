@@ -23,8 +23,8 @@ export const projectsMethod = (() => {
     }
     const allProjects = () => projects
 
-    const delTodo = (projInd,todoInd) => {
-        projects[projInd].todoList.splice(todoInd,1)
+    const delTodo = (todoInd) => {
+        projects.map(x => x.todoList.splice(todoInd,1))
     }
     const checkTodos = (projectInd,checkIndex) => {
         projects[projectInd].todoList[checkIndex].checkList = true
@@ -35,14 +35,18 @@ export const projectsMethod = (() => {
     }
     const saveLocally = () => {
         localStorage.setItem('proj',JSON.stringify(projects))
-        
     }
     const fetchLocally = () => {
+       if(localStorage.getItem('proj')){
+        return projects =  JSON.parse(localStorage.getItem('proj'))
+       }else{
         return JSON.parse(localStorage.getItem('proj'))
+       }
     }
+    
     return {
         addTodo,allTodos,addProjects,
         addTodoProject,allProjects,delProject,
-        delTodo,checkTodos,priority,saveLocally
+        delTodo,checkTodos,priority,saveLocally,fetchLocally
         }
 })()
